@@ -1,0 +1,77 @@
+*{
+  padding:0px;
+  margin: 0px;
+}
+
+
+/* 
+
+Primeiro criei um visual básico para o botão que irá ativar
+o modal.
+
+Em baixo, a classe geral, modal é a que irá  englobar todo 
+o  conteúdo, po risso é a que terá um display:none.
+Ele não vai aparecer até que seja ativado com javascript  
+
+Também deixaremos seu z-index maior que outros
+elementos  na página para que se sobreponha.
+Aqui mantive 1, mas é comum usarem 999 caso tenha muitos
+componentes em posições diferentes do eixo Z.
+
+O backgroubd ficará levemente escurecido quando o modal 
+aparecer.
+
+*/
+.modal-button{
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px 25px;
+  background: #2196f3;
+}
+
+.modal{
+ display: none;
+ position:fixed;
+ width:100%;
+ height: 100%;
+ z-index:1;
+ left:0;
+ top:0;
+ overflow: auto;
+ background-color: rgba(0,0,0,0.5);
+}
+
+/*
+A primeria classe está organizando o conteúdo que aparecerá dentro do modal.
+No nosso caso, é apenas um h1 e um paragráfo, mas garantimos que eles aparecer~ao no meio
+da página com a margem.
+
+Depois, temos nosso botão de fechar. Nesse exemplo é apenas um texto "Fechar" mas experimente usar um X ou um ícone que indique close.
+
+
+/*
+
+.modal-content {
+  background-color: #fafafa;
+  margin: 10% auto;
+  padding:25px 40px;
+  border: 2px solid #2196f3;
+  border-radius: 6px;
+  width: 50%;
+}
+
+.close{
+    color: #2196f3;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;   
+}
+
+.close:hover {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+}
